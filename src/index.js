@@ -8,9 +8,14 @@ import "./index.css";
 // Main APP
 import App from "./App";
 
+// Context
+import { FavouritesContextProvider } from "./contexts/favourites-context";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <FavouritesContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </FavouritesContextProvider>
 );
